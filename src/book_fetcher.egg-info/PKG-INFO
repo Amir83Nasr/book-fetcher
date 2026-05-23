@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: book-fetcher
+Version: 0.1.0
+Summary: Fetch books from OpenLibrary and save filtered results to CSV.
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: types-requests; extra == "dev"
+Requires-Dist: pytest; extra == "dev"

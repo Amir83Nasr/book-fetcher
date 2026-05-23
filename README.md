@@ -1,0 +1,104 @@
+# Book Fetcher
+
+A Python package that fetches book data from the OpenLibrary API, filters by publication year, and exports the results to CSV.
+
+## Features
+
+- Fetch books from OpenLibrary based on subject and year
+- Automatic retry on network or server errors
+- Filter and sort by publication year
+- Export to structured CSV
+- Fully typed, linted, and tested
+
+## Requirements
+
+- Python 3.10 or higher
+
+## Installation
+
+### Install the package
+
+```bash
+pip install -e .
+```
+
+### Install with development tools
+
+```bash
+pip install -e ".[dev]"
+```
+
+Or use the provided Makefile:
+
+```bash
+make install
+make install-dev
+```
+
+## Usage
+
+### Command line
+
+After installation, run the entry point:
+
+```bash
+book-fetcher
+```
+
+Or with Make:
+
+```bash
+make run
+```
+
+Output is written to `data/books_after_2000.csv`.
+
+### Configuration
+
+Edit the constants in `src/book_fetcher/cli.py`:
+
+```python
+BOOK_LIMIT = 50    # Number of books to fetch
+BOOK_YEAR = 2000   # Minimum publication year
+BOOK_SUBJECT = "fiction"
+```
+
+## Development
+
+### Makefile targets
+
+| Command            | Description                     |
+|--------------------|---------------------------------|
+| `make help`        | Show all available commands     |
+| `make install`     | Install the package             |
+| `make install-dev` | Install with dev tools          |
+| `make run`         | Run the book fetcher            |
+| `make lint`        | Lint source code                |
+| `make lint-fix`    | Lint and auto-fix               |
+| `make format`      | Format code with ruff and black |
+| `make typecheck`   | Run mypy type checking          |
+| `make test`        | Run tests with pytest           |
+| `make clean`       | Remove generated files          |
+
+### Project Structure
+
+```txt
+book-fetcher/
+├── src/
+│   └── book_fetcher/
+│       ├── __init__.py
+│       ├── api.py
+│       ├── filter.py
+│       ├── writer.py
+│       └── cli.py
+├── tests/
+│   └── test_api.py
+├── pyproject.toml
+├── Makefile
+└── README.md
+```
+
+## License
+
+MIT
+This project is created for educational purposes as part of a backend Python bootcamp.

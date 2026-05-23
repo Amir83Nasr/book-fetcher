@@ -1,0 +1,9 @@
+requests
+
+[dev]
+ruff
+black
+isort
+mypy
+types-requests
+pytest
