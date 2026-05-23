@@ -1,2 +1,0 @@
-[console_scripts]
-book-fetcher = book_fetcher.cli:main
