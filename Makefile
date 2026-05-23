@@ -33,4 +33,4 @@ test:  ## Run tests with pytest
 	pytest
 
 clear:  ## Clean generated files
-	rm -rf data/* __pycache__ .mypy_cache .pytest_cache
+	rm -rf data/* __pycache__ .mypy_cache .pytest_cache *.ruff_cache *.egg-info

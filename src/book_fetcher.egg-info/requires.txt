@@ -1,4 +1,7 @@
 requests
+fastapi
+uvicorn
+pydantic
 
 [dev]
 ruff

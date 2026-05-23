@@ -8,7 +8,7 @@ from book_fetcher.filter import filter_books_by_year
 from book_fetcher.writer import save_to_csv
 
 # Configuration constants (in a future you can move to a config module or env vars)
-BOOK_LIMIT = 1  # Change to 50 for final submission
+BOOK_LIMIT = 50
 BOOK_YEAR = 2000
 BOOK_SUBJECT = "fiction"
 OUTPUT_PATH = Path("data") / "books_after_2000.csv"
